@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aftab · Product Designer</title>
+<meta name="description" content="Product designer and front-end developer building polished user-facing products.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Caveat:wght@600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --fg:#111111; --muted:#6b6b6b; --faint:#9a9a9a;
+  --line:#ececec; --card:#f6f6f5; --code:#f4f4f3; --accent:#111;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e0e0e; --fg:#ededed; --muted:#9a9a9a; --faint:#6b6b6b;
+    --line:#222; --card:#171717; --code:#181818; --accent:#fff;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e0e0e; --fg:#ededed; --muted:#9a9a9a; --faint:#6b6b6b;
+  --line:#222; --card:#171717; --code:#181818; --accent:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--fg);font:15px/1.6 Inter,system-ui,sans-serif;letter-spacing:-.005em}
+a{color:inherit}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:var(--fg);color:var(--bg);padding:6px 10px;border-radius:6px}
+.wrap{max-width:620px;margin:0 auto;padding:0 16px}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0}
+nav{display:flex;gap:4px}
+nav a{text-decoration:none;color:var(--muted);font-size:14px;padding:6px 10px;border-radius:999px;transition:.2s}
+nav a:hover{color:var(--fg)}
+nav a.on{color:var(--fg);background:var(--card)}
+.sig{font-family:Caveat,cursive;font-size:30px;text-decoration:none;line-height:1}
+main{padding:72px 0 40px;animation:in .45s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+h1{font-size:26px;line-height:1.3;font-weight:500;letter-spacing:-.02em}
+h1 .m{color:var(--muted)}
+.lead{color:var(--muted);margin-top:16px;max-width:520px}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:9px 16px;border-radius:999px;background:var(--fg);color:var(--bg);text-decoration:none;font-size:14px;font-weight:500;transition:transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.eyebrow{font-size:13px;color:var(--faint);margin-bottom:12px}
+section{margin-top:72px}
+h2{font-size:14px;font-weight:500;color:var(--faint);margin-bottom:20px}
+.xp{display:block;padding:16px 0;border-top:1px solid var(--line)}
+.xp-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.xp b{font-weight:500}
+.xp .co small{color:var(--muted);font-weight:400;margin-left:8px}
+.xp .d{color:var(--faint);font-size:13px;white-space:nowrap}
+.xp .role{color:var(--muted);font-size:14px}
+.xp p{color:var(--muted);font-size:14px;margin-top:6px;max-height:0;overflow:hidden;transition:max-height .35s ease}
+.xp:hover p,.xp:focus-within p{max-height:200px}
+.work{list-style:none;display:grid;gap:40px}
+.work a{text-decoration:none;display:block}
+.thumb{aspect-ratio:16/9;border-radius:14px;display:grid;place-items:center;font-weight:600;font-size:28px;color:#fff;letter-spacing:-.03em;overflow:hidden;transition:transform .4s}
+.work a:hover .thumb{transform:scale(1.01)}
+.work h3{font-size:15px;font-weight:500;margin-top:14px;display:flex;justify-content:space-between;gap:12px}
+.work h3 span{color:var(--faint);font-weight:400;font-size:13px;white-space:nowrap}
+.work p{color:var(--muted);font-size:14px;margin-top:4px}
+.post{padding:28px 0;border-top:1px solid var(--line)}
+.post .thumb{aspect-ratio:4/3;margin-bottom:16px;padding:0}
+.post .thumb svg{display:block}
+.post h2{color:var(--fg);font-size:16px;margin:0 0 6px}
+.post p{color:var(--muted);font-size:14px}
+.prose p{color:var(--muted);margin-top:16px}
+.prose h2{margin-top:40px;margin-bottom:0;color:var(--fg);font-size:16px}
+pre{background:var(--code);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:12px;overflow-x:auto;font:13px/1.6 "JetBrains Mono",monospace;color:var(--fg)}
+code{font:13px "JetBrains Mono",monospace;background:var(--code);padding:1px 5px;border-radius:5px}
+.tools{margin-top:12px}
+.tools div{padding:12px 0;border-top:1px solid var(--line)}
+.tools div p{margin-top:2px;font-size:14px}
+ul.ask{margin:12px 0 0 18px;color:var(--muted)}
+ul.ask li{margin-top:4px}
+.copy{float:right;font-size:12px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:6px;padding:2px 8px;cursor:pointer}
+.back{display:inline-block;font-size:14px;color:var(--muted);text-decoration:none;margin-bottom:24px}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;font-size:13px}
+.meta span{display:block;color:var(--faint)}
+footer{padding:48px 0 40px;color:var(--faint);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+footer a{color:var(--faint)}
+.tt{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:4px 10px;cursor:pointer;font-size:12px}
+@media(max-width:520px){h1{font-size:22px}main{padding-top:48px}.xp-top{flex-direction:column;gap:0}.meta{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Skip to main content</a>
+<div class="wrap">
+  <header>
+    <nav id="nav">
+      <a href="#/">Home</a><a href="#/posts">Posts</a><a href="#/story">Story</a><a href="#/mcp">MCP</a>
+    </nav>
+    <a class="sig" href="#/" aria-label="Home" id="sig"></a>
+  </header>
+  <main id="app"></main>
+  <footer><span id="copy"></span><button class="tt" id="tt">Theme</button></footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+/* ============================================================
+   APNI DETAILS SIRF YAHAN BADLEIN — baqi site khud update ho jaye gi
+   ============================================================ */
+/* Saara content data.js mein hai */
+/* ============================================================ */
+
+const $ = s => document.querySelector(s);
+const ep = `https://${DATA.domain}/api/mcp`;
+const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+const pages = {
+  home: () => `
+    <h1>${esc(DATA.headline)} <span class="m">${esc(DATA.headlineMuted)}</span></h1>
+    <p class="lead">${esc(DATA.intro)}</p>
+    <a class="btn" href="#/mcp">Ask AI <span aria-hidden="true">→</span></a>
+    <section><h2>Experience</h2>
+      ${DATA.experience.map(x=>`
+        <div class="xp" tabindex="0">
+          <div class="xp-top"><span class="co"><b>${esc(x.company)}</b><small>${esc(x.tag)}</small></span><span class="d">${esc(x.date)}</span></div>
+          <div class="role">${esc(x.role)}</div>
+          <p>${esc(x.text)}</p>
+        </div>`).join('')}
+    </section>
+    <section><h2>Work</h2>
+      <ol class="work">${DATA.work.map(w=>`
+        <li><a href="#/work/${w.slug}">
+          <div class="thumb" style="background:${w.color}">${esc(w.mark)}</div>
+          <h3>${esc(w.title)}<span>${esc(w.date)}</span></h3>
+          <p>${esc(w.summary)}</p>
+        </a></li>`).join('')}</ol>
+    </section>`,
+
+  posts: () => `
+    <div class="eyebrow">Posts · ${DATA.posts.length}</div>
+    <h1>Experiments, ideas, and works in progress.</h1>
+    <div style="margin-top:40px">${DATA.posts.map(p=>`
+      <article class="post">
+        <div class="thumb" style="background:${p.color}">${art(p.art)}</div>
+        <h2>${esc(p.title)}</h2><p>${esc(p.text)}</p>
+      </article>`).join('')}</div>`,
+
+  story: () => `
+    <div class="eyebrow">Story</div>
+    <h1>How I got here.</h1>
+    <div class="prose">${DATA.story.map(s=>`<p>${esc(s)}</p>`).join('')}</div>`,
+
+  mcp: () => `
+    <div class="eyebrow">MCP</div>
+    <h1>Point your AI tools at my work.</h1>
+    <div class="prose">
+      <p>This site runs a <a href="https://modelcontextprotocol.io">Model Context Protocol</a> server. Connect it once and Claude Code, Cursor or any MCP client can answer questions about my background directly.</p>
+      <h2>Claude Code</h2><p>One command:</p>
+      ${code(`claude mcp add --transport http ${DATA.name.toLowerCase()} ${ep}`)}
+      <p>Add <code>--scope user</code> to make it available in every project.</p>
+      <h2>Cursor, and anything else</h2>
+      <p>Add it to your MCP config file (<code>.cursor/mcp.json</code> for Cursor, <code>.mcp.json</code> for Claude Code).</p>
+      ${code(JSON.stringify({mcpServers:{[DATA.name.toLowerCase()]:{type:"http",url:ep}}},null,2))}
+      <h2>Then ask</h2>
+      <ul class="ask">${DATA.mcpAsk.map(a=>`<li>${esc(a)}</li>`).join('')}</ul>
+      <h2>What it exposes</h2>
+      <div class="tools">${[
+        ["search_portfolio","Search roles, case studies, skills and outcomes."],
+        ["get_profile","Who I am and what I'm working on now."],
+        ["get_work_history","Every role, newest first."],
+        ["get_case_studies","Case studies with summaries and links."],
+        ["read_case_study","Full text of a case study or the story page."],
+        ["list_posts","Titles of experiments on the posts page."],
+        ["get_skills","Skills grouped by design, engineering and domains."]
+      ].map(([t,d])=>`<div><code>${t}</code><p>${d}</p></div>`).join('')}</div>
+      <h2>The endpoint</h2>
+      ${code(ep)}
+      <p>Streamable HTTP transport, stateless, no API key.</p>
+      <h2>Without an MCP client</h2>
+      <p><a href="/llms.txt">/llms.txt</a> is a plain-text summary of everything here.</p>
+      <h2>Questions?</h2>
+      <p>Reach me on <a href="${DATA.linkedin}">LinkedIn</a>.</p>
+    </div>`,
+
+  work: slug => {
+    const w = DATA.work.find(x=>x.slug===slug); if(!w) return pages.home();
+    return `
+      <a class="back" href="#/">← Back</a>
+      <h1>${esc(w.title)}</h1>
+      <p class="lead">${esc(w.summary)}</p>
+      <div class="meta"><div><span>Role</span>${esc(w.role)}</div><div><span>Team</span>${esc(w.team)}</div><div><span>Timeline</span>${esc(w.time)}</div></div>
+      <div class="thumb" style="background:${w.color};margin-top:32px">${esc(w.mark)}</div>
+      <div class="prose">${w.body.map(([h,t])=>`<h2>${esc(h)}</h2><p>${esc(t)}</p>`).join('')}</div>`;
+  }
+};
+
+function art(type){
+  const W='rgba(255,255,255,', s=(o)=>`${W}${o})`;
+  const box=(x,y,w,h,o=.12,r=8)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${s(o)}"/>`;
+  const svg=inner=>`<svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${inner}</svg>`;
+  const A = {
+    dashboard: box(40,40,320,220,.08,14)+box(52,52,60,196,.1)+[0,1,2].map(i=>box(124+i*76,52,68,46,.14)+box(132+i*76,62,30,6,.35,3)+box(132+i*76,76,46,10,.6,3)).join('')
+      +box(124,108,224,92,.1)+`<polyline points="134,186 164,170 194,176 224,150 254,158 284,130 314,138 338,120" fill="none" stroke="${s(.85)}" stroke-width="3" stroke-linecap="round"/>`
+      +box(124,208,108,40,.1)+box(240,208,108,40,.1)+[0,1,2,3,4].map(i=>box(62,64+i*22,40,8,i?.25:.6,4)).join(''),
+    chat: box(70,50,260,200,.1,18)+box(150,72,160,28,.22,14)+box(90,110,190,44,.14,14)+box(90,164,120,28,.14,14)
+      +box(86,206,228,32,.9,16)+`<circle cx="296" cy="222" r="11" fill="#7c3aed"/>`+[0,1,2].map(i=>`<circle cx="${110+i*14}" cy="178" r="4" fill="${s(.7)}"><animate attributeName="opacity" values=".2;1;.2" dur="1.2s" begin="${i*.2}s" repeatCount="indefinite"/></circle>`).join(''),
+    component: [["#22c55e","Active"],["#f59e0b","Pending"],["#ef4444","Failed"],["#94a3b8","Paused"]].map(([c,t],i)=>
+      `<rect x="${110}" y="${62+i*46}" width="180" height="34" rx="17" fill="${s(.92)}"/><circle cx="132" cy="${79+i*46}" r="6" fill="${c}"/><text x="148" y="${84+i*46}" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#0f172a">${t}</text>`).join(''),
+    palette: Array.from({length:9},(_,i)=>`<rect x="${40+i*36}" y="90" width="32" height="120" rx="8" fill="hsl(45,${90-i*3}%,${92-i*9}%)"/>`).join('')
+      +`<text x="40" y="240" font-family="Inter,sans-serif" font-size="12" fill="${s(.85)}">50 · 100 · 200 · 300 · 400 · 500 · 600 · 700 · 800</text>`,
+    chart: [0,1,2,3,4,5,6].map(i=>{const h=[60,90,70,130,110,160,140][i];return box(60+i*42,240-h,28,h,i===5?.95:.25,6)}).join('')
+      +`<line x1="50" y1="241" x2="356" y2="241" stroke="${s(.4)}"/><text x="270" y="66" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#fff">+24%</text>`,
+    mobile: [0,1,2].map(i=>`<g transform="translate(${62+i*96},40)">${box(0,0,84,220,.9,16).replace(s(.9),i===1?'#fff':s(.6))}${box(10,22,64,64,.0,10).replace('fill="'+s(.0)+'"','fill="#fb7185" opacity=".35"')}<rect x="10" y="100" width="56" height="8" rx="4" fill="#0f172a" opacity=".7"/><rect x="10" y="116" width="40" height="6" rx="3" fill="#0f172a" opacity=".3"/><rect x="10" y="188" width="64" height="20" rx="10" fill="#9f1239"/></g>`).join('')
+  };
+  return svg(A[type]||A.dashboard);
+}
+
+function code(t){return `<pre><button class="copy" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.nextElementSibling.textContent);this.textContent='Copied'">Copy</button><span>${esc(t)}</span></pre>`}
+
+function route(){
+  const [, p='', s] = (location.hash || '#/').split('/');
+  const key = p || 'home';
+  $('#app').innerHTML = key==='work' ? pages.work(s) : (pages[key]||pages.home)();
+  $('#app').style.animation='none'; void $('#app').offsetWidth; $('#app').style.animation='';
+  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on', a.getAttribute('href')===`#/${p}`));
+  const t = {home:'Product Designer',posts:'Posts',story:'Story',mcp:'MCP server',work:'Case study'}[key]||'Product Designer';
+  document.title = `${DATA.name} · ${t}`;
+  scrollTo(0,0);
+}
+$('#sig').textContent = DATA.name;
+$('#copy').innerHTML = `© ${new Date().getFullYear()} ${esc(DATA.name)}`;
+$('#tt').onclick = () => {
+  const r=document.documentElement, dark = r.dataset.theme ? r.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  r.dataset.theme = dark ? 'light' : 'dark';
+  try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}
+};
+try{const t=localStorage.getItem('theme'); if(t) document.documentElement.dataset.theme=t}catch(e){}
+addEventListener('hashchange', route); route();
+</script>
+</body>
+</html>
