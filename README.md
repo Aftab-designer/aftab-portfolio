@@ -6,3 +6,4 @@ Website + MCP server + llms.txt. Saara content `data.js` mein hai.
 - `data.js` — apni details yahan badlein
 - `api/mcp.js` — MCP server (`aftab.me/api/mcp`)
 - `api/llms.js` — `aftab.me/llms.txt`
+- `images/<slug>/` — case study images
