@@ -4,19 +4,28 @@ const DATA = {
   domain: "aftab.me",
   linkedin: "https://www.linkedin.com/in/maftabuiux",
   headline: "I design products, then I build them.",
-  headlineMuted: "Currently [company / project ka naam] par kaam kar raha hoon.",
-  intro: "[2-3 lines: kitne saal ka experience, kis industry mein, kaunsa impact. Misal: For the past X years, I've designed and built ... ]",
+  headlineMuted: "Currently Lead Product Designer / Head of Design at Jazi in Riyadh.",
+  intro: "For the past 10 years, I've designed eCommerce, quick commerce, crypto and fintech products across Saudi Arabia, the UAE, Malaysia, the UK and Pakistan, from 50+ food delivery and grocery apps to crypto exchanges used by traders every day. I focus on conversion-driven UX, scalable design systems and AI-powered design workflows.",
 
   experience: [
-    { company:"[Company 1]", tag:"[short tagline]", date:"[Year-Now]", role:"[Your role]",
-      text:"[Is role mein aap ne kya kiya, kya ship kiya, kya impact aaya.]" },
-    { company:"[Company 2]", tag:"[short tagline]", date:"[Year-Year]", role:"[Your role]",
-      text:"[Description]" },
-    { company:"[Company 3]", tag:"[short tagline]", date:"[Year-Year]", role:"[Your role]",
-      text:"[Description]" },
-    { company:"[Company 4]", tag:"[short tagline]", date:"[Year]", role:"[Your role]",
-      text:"[Description]" },
+    { company:"Jazi", tag:"Large-scale eCommerce in Saudi Arabia", date:"Feb 25-Now", role:"Lead Product Designer / Head of Design",
+      text:"Own end-to-end product design for Jazi's eCommerce mobile app, from discovery to launch. Set the UX strategy and lead the design system, redesigned product discovery, cart, checkout and vendor journeys for conversion, and introduced AI-powered workflows for research, ideation and prototyping." },
+    { company:"TinyTrader", tag:"Trading app, Kuala Lumpur", date:"Aug 24-Feb 25", role:"Lead Product Designer",
+      text:"Led product design for the TinyTrader mobile and web app, from UX strategy and user flows to high-fidelity UI and interactive prototypes. Established consistent UI patterns and reusable components, and worked closely with developers for a smooth handoff." },
+    { company:"CoinW", tag:"Global crypto exchange, Dubai", date:"Feb 23-Nov 24", role:"Product Designer",
+      text:"Designed the CoinW crypto trading app across onboarding, market exploration, spot trading, portfolio and account management. Simplified complex trading workflows, kept UI patterns consistent across the app, and partnered with product and engineering to ship user-centered solutions." },
+    { company:"Ajencia", tag:"eCommerce for UK clients, remote", date:"Sep 20-May 23", role:"Product Designer (part-time)",
+      text:"Designed eCommerce websites and mobile experiences for UK clients, including Grable, Glam 7 and MOOV.US. Improved product pages, cart and checkout flows for conversion, taking projects from user flows to polished, developer-ready UI." },
+    { company:"Dinosoftlabs", tag:"Food delivery & grocery apps, Lahore", date:"Oct 18-Jul 21", role:"UX/UI Designer",
+      text:"Designed 50+ mobile apps and web interfaces across food delivery, grocery and marketplace platforms, including GoDelivery, Freshly Grocery, Foodies, Groupy and Binder, covering end-to-end flows, wireframes and responsive UI." },
   ],
+
+  skills: {
+    design: ["Product design", "UX strategy", "Design systems", "Interaction design", "Prototyping", "UX research", "Usability testing"],
+    engineering: ["Figma", "FigJam", "Framer", "Webflow", "Claude", "Cursor", "Maze", "Miro"],
+    analytics: ["Google Analytics", "Hotjar", "Mixpanel", "Amplitude", "A/B testing"],
+    domains: ["eCommerce", "Quick commerce", "Crypto & Web3", "Fintech & trading", "SaaS", "AI products"]
+  },
 
   /* ===== CASE STUDIES =====
      Images: GitHub par "images/<slug>/" folder mein upload karein, phir yahan path likhein,
@@ -88,12 +97,12 @@ const DATA = {
   story: [
     "I started out pushing pixels in design tools, making screens that looked good in a mockup and then watching them change once they reached the browser. That gap between the design and what shipped bothered me more than anything else.",
     "So I learned front-end development. Not to switch careers, but to close that gap myself. Once I could build what I designed, my designs changed too: fewer impossible states, more attention to spacing, motion and how components behave with real data.",
-    "Today I work across both sides, designing interfaces and building polished, production-ready components, most recently on admin tooling for an AI trading platform. I care about the small details users feel but rarely notice.",
+    "Over 10 years that took me from food delivery and grocery apps in Lahore, to eCommerce for UK brands, to crypto trading in Dubai and Kuala Lumpur. Today I lead product design at Jazi in Riyadh, working across both sides: designing the experience and building polished, production-ready components. I care about the small details users feel but rarely notice.",
     "Next, I want to keep working on products where design and engineering sit at the same table, and where good UI makes complex things feel simple."
   ],
 
   mcpAsk: [
-    "“What has Aftab shipped in [domain]?”",
+    "“What has Aftab shipped in eCommerce and crypto?”",
     "“Summarise his experience with design systems.”",
     "“Is he a fit for a senior product design role?”"
   ]
