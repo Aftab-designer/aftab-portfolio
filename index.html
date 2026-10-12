@@ -78,6 +78,33 @@ ul.ask li{margin-top:4px}
 .back{display:inline-block;font-size:14px;color:var(--muted);text-decoration:none;margin-bottom:24px}
 .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;font-size:13px}
 .meta span{display:block;color:var(--faint)}
+.cs-hero{aspect-ratio:16/9;border-radius:16px;overflow:hidden;display:grid;place-items:center;color:#fff;font-weight:600;font-size:28px;letter-spacing:-.03em}
+.cs-hero img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.cs-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:32px}
+.cs-stats div{background:var(--card);border-radius:14px;padding:18px}
+.cs-stats b{display:block;font-size:28px;font-weight:500;letter-spacing:-.03em;line-height:1.2}
+.cs-stats span{color:var(--muted);font-size:13px}
+.cs-meta{margin-top:28px;font-size:14px}
+.cs-meta div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.cs-meta dt{color:var(--faint)}
+.cs-sec{margin-top:56px}
+.cs-sec h2{color:var(--fg);font-size:18px;margin-bottom:0;letter-spacing:-.01em}
+.cs-sec>p{color:var(--muted);margin-top:14px}
+.cs-sec h3{font-size:15px;font-weight:500}
+.cs-sec ol{list-style:none;margin-top:18px;display:grid;gap:4px}
+.cs-sec li{display:flex;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.cs-sec li p{color:var(--muted);font-size:14px;margin-top:2px}
+.cs-num .n{color:var(--faint);font:13px "JetBrains Mono",monospace;padding-top:2px}
+.cs-fig{margin:28px -16px 0}
+.cs-fig img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);cursor:zoom-in;background:var(--card)}
+.cs-ph{aspect-ratio:16/10;border-radius:14px;display:grid;place-items:center;opacity:.85}
+.cs-ph span{color:#fff;font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.cs-fig figcaption{color:var(--faint);font-size:13px;font-style:italic;margin:10px 16px 0;text-align:center}
+@media(min-width:760px){.cs-fig{margin-left:-60px;margin-right:-60px}}
+.cs-next{display:block;margin-top:72px;padding:24px;border-radius:14px;background:var(--card);text-decoration:none;font-weight:500}
+.cs-next span{display:block;color:var(--faint);font-size:13px;font-weight:400;margin-bottom:4px}
+.zoom{position:fixed;inset:0;background:rgba(0,0,0,.88);display:grid;place-items:center;z-index:50;cursor:zoom-out;padding:16px;animation:in .2s ease}
+.zoom img{max-width:100%;max-height:100%;border-radius:10px}
 footer{padding:48px 0 40px;color:var(--faint);font-size:13px;display:flex;justify-content:space-between;align-items:center}
 footer a{color:var(--faint)}
 .tt{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:4px 10px;cursor:pointer;font-size:12px}
@@ -125,7 +152,7 @@ const pages = {
     <section><h2>Work</h2>
       <ol class="work">${DATA.work.map(w=>`
         <li><a href="#/work/${w.slug}">
-          <div class="thumb" style="background:${w.color}">${esc(w.mark)}</div>
+          <div class="thumb" style="background:${w.color}">${w.cover?`<img src="${esc(w.cover)}" alt="" style="width:100%;height:100%;object-fit:cover">`:esc(w.mark)}</div>
           <h3>${esc(w.title)}<span>${esc(w.date)}</span></h3>
           <p>${esc(w.summary)}</p>
         </a></li>`).join('')}</ol>
@@ -178,14 +205,30 @@ const pages = {
     </div>`,
 
   work: slug => {
-    const w = DATA.work.find(x=>x.slug===slug); if(!w) return pages.home();
+    const i = DATA.work.findIndex(x=>x.slug===slug); if(i<0) return pages.home();
+    const w = DATA.work[i], next = DATA.work[(i+1)%DATA.work.length];
+    const fig = im => `<figure class="cs-fig">${im.src
+        ? `<img src="${esc(im.src)}" alt="${esc(im.caption||'')}" loading="lazy" data-zoom>`
+        : `<div class="cs-ph" style="background:${w.color}"><span>Image</span></div>`}
+      ${im.caption?`<figcaption>${esc(im.caption)}</figcaption>`:''}</figure>`;
+    const list = (arr, num) => `<ol class="${num?'cs-num':'cs-points'}">${arr.map((p,k)=>`<li>${num?`<span class="n">${String(k+1).padStart(2,'0')}</span>`:''}<div><h3>${esc(p.title)}</h3>${p.text?`<p>${esc(p.text)}</p>`:''}</div></li>`).join('')}</ol>`;
     return `
       <a class="back" href="#/">← Back</a>
-      <h1>${esc(w.title)}</h1>
+      <div class="cs-hero" style="background:${w.color}">${w.cover?`<img src="${esc(w.cover)}" alt="" data-zoom>`:`<span>${esc(w.mark)}</span>`}</div>
+      ${w.eyebrow?`<div class="eyebrow" style="margin-top:32px">${esc(w.eyebrow)}</div>`:''}
+      <h1 ${w.eyebrow?'':'style="margin-top:32px"'}>${esc(w.title)}</h1>
       <p class="lead">${esc(w.summary)}</p>
-      <div class="meta"><div><span>Role</span>${esc(w.role)}</div><div><span>Team</span>${esc(w.team)}</div><div><span>Timeline</span>${esc(w.time)}</div></div>
-      <div class="thumb" style="background:${w.color};margin-top:32px">${esc(w.mark)}</div>
-      <div class="prose">${w.body.map(([h,t])=>`<h2>${esc(h)}</h2><p>${esc(t)}</p>`).join('')}</div>`;
+      ${(w.stats||[]).length?`<div class="cs-stats">${w.stats.map(s=>`<div><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join('')}</div>`:''}
+      ${(w.meta||[]).length?`<dl class="cs-meta">${w.meta.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`:''}
+      ${(w.sections||[]).map(s=>`
+        <section class="cs-sec">
+          <h2>${esc(s.heading)}</h2>
+          ${(s.text||[]).map(t=>`<p>${esc(t)}</p>`).join('')}
+          ${s.points?list(s.points,false):''}
+          ${s.numbered?list(s.numbered,true):''}
+          ${(s.images||[]).map(fig).join('')}
+        </section>`).join('')}
+      ${DATA.work.length>1?`<a class="cs-next" href="#/work/${next.slug}"><span>Next case study</span>${esc(next.title)} →</a>`:''}`;
   }
 };
 
@@ -230,6 +273,13 @@ $('#tt').onclick = () => {
   try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}
 };
 try{const t=localStorage.getItem('theme'); if(t) document.documentElement.dataset.theme=t}catch(e){}
+document.addEventListener('click', e => {
+  const z = document.querySelector('.zoom');
+  if (z) { z.remove(); return; }
+  const img = e.target.closest('img[data-zoom]');
+  if (img) { const d=document.createElement('div'); d.className='zoom'; d.innerHTML=`<img src="${img.src}" alt="">`; document.body.appendChild(d); }
+});
+addEventListener('keydown', e => { if (e.key==='Escape') document.querySelector('.zoom')?.remove(); });
 addEventListener('hashchange', route); route();
 </script>
 </body>

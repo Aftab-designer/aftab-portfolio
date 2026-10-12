@@ -18,25 +18,55 @@ const DATA = {
       text:"[Description]" },
   ],
 
+  /* ===== CASE STUDIES =====
+     Images: GitHub par "images/<slug>/" folder mein upload karein, phir yahan path likhein,
+     misal: { src:"images/crx-admin/journey.png", caption:"..." }
+     src khali ("") ho to placeholder box dikhega — image daalte hi asli picture aa jayegi.
+     Har section mein jitni chahein images add karein. */
   work: [
-    { slug:"crx-admin", title:"[Case study 1 — misal: CRX trading admin dashboard]", date:"[Dates]",
+    { slug:"crx-admin", eyebrow:"CRX · Admin dashboard", date:"[Dates]",
+      title:"[Case study 1 — misal: Designing the admin dashboard for an AI trading platform]",
       color:"linear-gradient(135deg,#1e1b4b,#6d28d9 60%,#2563eb)", mark:"Case 01",
+      cover:"",
       summary:"[1-2 lines: problem, aap ka role, outcome]",
-      role:"[Role]", team:"[Team]", time:"[Timeline]",
-      body:[
-        ["Problem","[Kya masla tha?]"],
-        ["Process","[Research, wireframes, iterations…]"],
-        ["Solution","[Final design aur kyun]"],
-        ["Outcome","[Numbers / results]"]
+      stats:[ {value:"[e.g. 40%]", label:"[faster task completion]"}, {value:"[e.g. 12]", label:"[core flows redesigned]"} ],
+      meta:[ ["Role","[Product designer & front-end]"], ["Timeline","[e.g. 8 weeks]"], ["Product","[CRX admin]"],
+             ["Scope","[Research, UX, UI, components]"], ["Collaboration","[PM, 3 engineers]"], ["Period","[2026]"] ],
+      sections:[
+        { heading:"The problem", text:["[Kya masla tha? Users kaun the, unhein kya takleef thi?]"],
+          images:[ {src:"", caption:"[Current journey map / purane dashboard ka screenshot]"} ] },
+        { heading:"The goal", text:["[Hum kya achieve karna chahte the]"],
+          points:[ {title:"[Clear]", text:"[Principle 1]"}, {title:"[Fast]", text:"[Principle 2]"}, {title:"[Safe]", text:"[Principle 3]"} ] },
+        { heading:"Research & workshop", text:["[Interviews, workshops, audits — kya seekha]"],
+          images:[ {src:"", caption:"[Workshop board]"}, {src:"", caption:"[User flow diagram]"} ] },
+        { heading:"Design decisions", numbered:[ {title:"[Decision 1]", text:"[Kyun]"}, {title:"[Decision 2]", text:"[Kyun]"}, {title:"[Decision 3]", text:"[Kyun]"} ],
+          images:[ {src:"", caption:"[Early wireframes / explorations]"} ] },
+        { heading:"Final experience", text:["[Final design ka walkthrough]"],
+          images:[ {src:"", caption:"[Final screens]"}, {src:"", caption:"[Component library]"} ] },
+        { heading:"Outcome", text:["[Results, numbers, feedback]"],
+          images:[ {src:"", caption:"[Metrics / feedback screenshot]"} ] },
+        { heading:"Takeaways", numbered:[ {title:"[Lesson 1]", text:""}, {title:"[Lesson 2]", text:""}, {title:"[Lesson 3]", text:""} ] }
       ]},
-    { slug:"case-2", title:"[Case study 2]", date:"[Dates]",
-      color:"linear-gradient(135deg,#f97362,#fb923c)", mark:"Case 02",
-      summary:"[Summary]", role:"[Role]", team:"[Team]", time:"[Timeline]",
-      body:[["Problem","[…]"],["Solution","[…]"],["Outcome","[…]"]]},
-    { slug:"case-3", title:"[Case study 3]", date:"[Dates]",
-      color:"linear-gradient(135deg,#064e3b,#10b981)", mark:"Case 03",
-      summary:"[Summary]", role:"[Role]", team:"[Team]", time:"[Timeline]",
-      body:[["Problem","[…]"],["Solution","[…]"],["Outcome","[…]"]]},
+    { slug:"case-2", eyebrow:"[Product · Feature]", date:"[Dates]", title:"[Case study 2]",
+      color:"linear-gradient(135deg,#f97362,#fb923c)", mark:"Case 02", cover:"",
+      summary:"[Summary]",
+      stats:[ {value:"[Number]", label:"[What it means]"} ],
+      meta:[ ["Role","[Role]"], ["Timeline","[Timeline]"], ["Team","[Team]"] ],
+      sections:[
+        { heading:"The problem", text:["[…]"], images:[ {src:"", caption:"[Image caption]"} ] },
+        { heading:"Solution", text:["[…]"], images:[ {src:"", caption:"[Image caption]"}, {src:"", caption:"[Image caption]"} ] },
+        { heading:"Outcome", text:["[…]"] }
+      ]},
+    { slug:"case-3", eyebrow:"[Product · Feature]", date:"[Dates]", title:"[Case study 3]",
+      color:"linear-gradient(135deg,#064e3b,#10b981)", mark:"Case 03", cover:"",
+      summary:"[Summary]",
+      stats:[ {value:"[Number]", label:"[What it means]"} ],
+      meta:[ ["Role","[Role]"], ["Timeline","[Timeline]"], ["Team","[Team]"] ],
+      sections:[
+        { heading:"The problem", text:["[…]"], images:[ {src:"", caption:"[Image caption]"} ] },
+        { heading:"Solution", text:["[…]"], images:[ {src:"", caption:"[Image caption]"}, {src:"", caption:"[Image caption]"} ] },
+        { heading:"Outcome", text:["[…]"] }
+      ]},
   ],
 
   /* art: dashboard | mobile | chat | component | palette | chart */
