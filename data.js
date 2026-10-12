@@ -3,6 +3,7 @@ const DATA = {
   name: "Aftab",
   domain: "aftab.me",
   linkedin: "https://www.linkedin.com/in/maftabuiux",
+  contact: { email: "info.aftabdesigner@gmail.com", phone: "+966581265357", whatsapp: "+966581265357" },
   photo: "images/aftab.jpg",
   headline: "I design products, then I build them.",
   headlineMuted: "Currently Lead Product Designer / Head of Design at Jazi in Riyadh.",
