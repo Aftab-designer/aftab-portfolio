@@ -22,7 +22,7 @@ const TOOLS = {
   },
   get_profile: {
     description: 'Who I am and what I am working on now.',
-    run: () => ({ name: D.name, headline: `${D.headline} ${D.headlineMuted}`, intro: D.intro, linkedin: D.linkedin, site }),
+    run: () => ({ name: D.name, headline: `${D.headline} ${D.headlineMuted}`, intro: D.intro, linkedin: D.linkedin, contact: D.contact, site }),
   },
   get_work_history: { description: 'Every role, newest first.', run: () => D.experience },
   get_case_studies: { description: 'Case studies with summaries and links.', run: work },
