@@ -5,7 +5,7 @@ const DATA = {
   linkedin: "https://www.linkedin.com/in/maftabuiux",
   headline: "I design products, then I build them.",
   headlineMuted: "Currently Lead Product Designer / Head of Design at Jazi in Riyadh.",
-  intro: "For the past 8+ years, I've designed eCommerce, quick commerce, crypto and fintech products across Saudi Arabia, the UAE, Malaysia, the UK and Pakistan, from 50+ food delivery and grocery apps to crypto exchanges used by traders every day. I focus on conversion-driven UX, scalable design systems and AI-powered design workflows.",
+  intro: "For 8+ years, I've designed the moments where people shop, pay and trade, from eCommerce checkouts in Riyadh to crypto exchanges in Dubai. I turn complex journeys into simple, high-converting experiences, backed by scalable design systems and AI-powered workflows.",
 
   experience: [
     { company:"Jazi", tag:"Large-scale eCommerce in Saudi Arabia", date:"Feb 25-Now", role:"Lead Product Designer / Head of Design",
