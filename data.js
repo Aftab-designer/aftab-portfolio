@@ -94,12 +94,26 @@ const DATA = {
       text:"How short can onboarding get before it stops working? This concept does it in three screens: who you are, what you want, and a first win. Everything else moves to the moment it's actually needed." },
   ],
 
-  story: [
-    "I started out pushing pixels in design tools, making screens that looked good in a mockup and then watching them change once they reached the browser. That gap between the design and what shipped bothered me more than anything else.",
-    "So I learned front-end development. Not to switch careers, but to close that gap myself. Once I could build what I designed, my designs changed too: fewer impossible states, more attention to spacing, motion and how components behave with real data.",
-    "Over 8+ years that took me from food delivery and grocery apps in Lahore, to eCommerce for UK brands, to crypto trading in Dubai and Kuala Lumpur. Today I lead product design at Jazi in Riyadh, working across both sides: designing the experience and building polished, production-ready components. I care about the small details users feel but rarely notice.",
-    "Next, I want to keep working on products where design and engineering sit at the same table, and where good UI makes complex things feel simple."
-  ],
+  /* ===== STORY PAGE =====  photo: "images/aftab.jpg" (GitHub par upload karke path likhein) */
+  storyPage: {
+    photo: "",
+    headline: "From food delivery apps in Lahore to leading design in Riyadh.",
+    subtitle: "An 8+ year journey through quick commerce, eCommerce, crypto and fintech, and what each one taught me about designing for real people.",
+    sections: [
+      { heading: "Where it started",
+        text: ["I studied Computer Science at National Textile University, but the part I kept coming back to was never the code on its own. It was the interface: why one screen feels effortless and another makes people give up. Before I had even graduated, I was designing real products used by real customers."] },
+      { heading: "Learning at speed",
+        text: ["My first design home was Dinosoftlabs in Lahore, and it was the best school I could have asked for. I designed food delivery, grocery and marketplace apps like GoDelivery, Freshly Grocery and Foodies, often several at once.",
+               "Quick commerce teaches you fast. Every extra tap costs an order, and a hungry customer will not wait for a confusing menu. I learned to design for speed and clarity on both sides of the marketplace: customers placing and tracking orders in real time, and restaurant owners managing menus and orders behind the scenes."] },
+      { heading: "Designing for conversion",
+        text: ["At Ajencia, working remotely with clients in the UK, I moved deeper into eCommerce. Projects like Grable, MOOV.US and Glam 7 sharpened my focus on the moments that decide revenue: product discovery, product pages, cart and checkout. Small details in those flows turned out to matter more than any big redesign."] },
+      { heading: "Designing for trust",
+        text: ["Then came money in its most demanding form. At CoinW in Dubai and later TinyTrader in Kuala Lumpur, I designed crypto trading and investing experiences: onboarding, KYC, market exploration, spot trading and portfolio management. When people put their savings on the line, clarity is not a nice-to-have. It is what trust is made of. I learned to turn dense, high-stakes workflows into calm, confident experiences."] },
+      { heading: "Leading today",
+        text: ["Today I lead product design at Jazi, a large-scale eCommerce platform in Riyadh. I own the experience end to end, set the UX strategy, run the design system, and redesign the journeys that move the business, from discovery to checkout and the vendor experience.",
+               "I also build. I use AI-powered workflows with Claude, Cursor and Figma to research, prototype and ship faster, and I write production-ready front-end so what we design is exactly what users get. I design products, then I build them, and I care most about the small details people feel but rarely notice."] }
+    ]
+  },
 
   mcpAsk: [
     "“What has Aftab shipped in eCommerce and crypto?”",
@@ -107,4 +121,5 @@ const DATA = {
     "“Is he a fit for a senior product design role?”"
   ]
 };
+DATA.story = DATA.storyPage.sections.flatMap(s => s.text);
 if (typeof module !== 'undefined') module.exports = DATA;
