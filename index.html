@@ -29,7 +29,7 @@ body{background:var(--bg);color:var(--fg);font:15px/1.6 Inter,system-ui,sans-ser
 a{color:inherit}
 .skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:var(--fg);color:var(--bg);padding:6px 10px;border-radius:6px}
 .wrap{max-width:620px;margin:0 auto;padding:0 16px}
-header{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0}
+header{display:flex;justify-content:center;align-items:center;padding:28px 0 0}
 nav{display:flex;gap:4px}
 nav a{text-decoration:none;color:var(--muted);font-size:14px;padding:6px 10px;border-radius:999px;transition:.2s}
 nav a:hover{color:var(--fg)}
@@ -105,7 +105,11 @@ ul.ask li{margin-top:4px}
 .cs-next span{display:block;color:var(--faint);font-size:13px;font-weight:400;margin-bottom:4px}
 .zoom{position:fixed;inset:0;background:rgba(0,0,0,.88);display:grid;place-items:center;z-index:50;cursor:zoom-out;padding:16px;animation:in .2s ease}
 .zoom img{max-width:100%;max-height:100%;border-radius:10px}
-.portrait{width:132px;height:132px;border-radius:32px;object-fit:cover;display:block;margin-bottom:28px;filter:grayscale(1);background:var(--card)}
+.hero{text-align:center}
+.hero .lead{margin-left:auto;margin-right:auto}
+.hero .eyebrow{text-transform:uppercase;letter-spacing:.12em}
+.hero-sig{display:block;width:max-content;margin:0 auto 32px;font-size:58px}
+.portrait{width:132px;height:132px;border-radius:32px;object-fit:cover;display:block;margin:0 auto 28px;filter:grayscale(1);background:var(--card)}
 .st-sec{margin-top:44px}
 .st-sec h2{color:var(--fg);font-size:16px;margin-bottom:0}
 .st-sec p{color:var(--muted);margin-top:12px;line-height:1.75}
@@ -122,7 +126,6 @@ footer a{color:var(--faint)}
     <nav id="nav">
       <a href="#/">Home</a><a href="#/posts">Posts</a><a href="#/story">Story</a><a href="#/mcp">MCP</a>
     </nav>
-    <a class="sig" href="#/" aria-label="Home" id="sig"></a>
   </header>
   <main id="app"></main>
   <footer><span id="copy"></span><button class="tt" id="tt">Theme</button></footer>
@@ -142,10 +145,12 @@ const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'
 
 const pages = {
   home: () => `
-    ${DATA.photo?`<img class="portrait" src="${esc(DATA.photo)}" alt="${esc(DATA.name)}" width="132" height="132">`:''}
+    <div class="hero">
+    <a class="sig hero-sig" href="#/" aria-label="Home">${esc(DATA.name)}</a>
     <h1>${esc(DATA.headline)} <span class="m">${esc(DATA.headlineMuted)}</span></h1>
     <p class="lead">${esc(DATA.intro)}</p>
     <a class="btn" href="#/mcp">Ask AI <span aria-hidden="true">→</span></a>
+    </div>
     <section><h2>Experience</h2>
       ${DATA.experience.map(x=>`
         <div class="xp" tabindex="0">
@@ -164,8 +169,8 @@ const pages = {
     </section>`,
 
   posts: () => `
-    <div class="eyebrow">Posts · ${DATA.posts.length}</div>
-    <h1>Experiments, ideas, and works in progress.</h1>
+    <div class="hero"><div class="eyebrow">Posts · ${DATA.posts.length}</div>
+    <h1>Experiments, ideas, and works in progress.</h1></div>
     <div style="margin-top:40px">${DATA.posts.map(p=>`
       <article class="post">
         <div class="thumb" style="background:${p.color}">${art(p.art)}</div>
@@ -173,16 +178,18 @@ const pages = {
       </article>`).join('')}</div>`,
 
   story: () => { const S = DATA.storyPage; return `
+    <div class="hero">
     ${S.photo?`<img class="portrait" src="${esc(S.photo)}" alt="${esc(DATA.name)}" width="132" height="132">`:''}
     <div class="eyebrow">Story</div>
     <h1>${esc(S.headline)}</h1>
     <p class="lead">${esc(S.subtitle)}</p>
+    </div>
     ${S.sections.map(s=>`<section class="st-sec"><h2>${esc(s.heading)}</h2>${s.text.map(t=>`<p>${esc(t)}</p>`).join('')}</section>`).join('')}
     <a class="cs-next" href="#/mcp"><span>Want the short version?</span>Ask AI about my work →</a>`; },
 
   mcp: () => `
-    <div class="eyebrow">MCP</div>
-    <h1>Point your AI tools at my work.</h1>
+    <div class="hero"><div class="eyebrow">MCP</div>
+    <h1>Point your AI tools at my work.</h1></div>
     <div class="prose">
       <p>This site runs a <a href="https://modelcontextprotocol.io">Model Context Protocol</a> server. Connect it once and Claude Code, Cursor or any MCP client can answer questions about my background directly.</p>
       <h2>Claude Code</h2><p>One command:</p>
@@ -273,7 +280,6 @@ function route(){
   document.title = `${DATA.name} · ${t}`;
   scrollTo(0,0);
 }
-$('#sig').textContent = DATA.name;
 $('#copy').innerHTML = `© ${new Date().getFullYear()} ${esc(DATA.name)}`;
 $('#tt').onclick = () => {
   const r=document.documentElement, dark = r.dataset.theme ? r.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
