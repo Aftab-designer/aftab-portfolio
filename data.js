@@ -5,7 +5,7 @@ const DATA = {
   linkedin: "https://www.linkedin.com/in/maftabuiux",
   headline: "I design products, then I build them.",
   headlineMuted: "Currently Lead Product Designer / Head of Design at Jazi in Riyadh.",
-  intro: "For the past 10 years, I've designed eCommerce, quick commerce, crypto and fintech products across Saudi Arabia, the UAE, Malaysia, the UK and Pakistan, from 50+ food delivery and grocery apps to crypto exchanges used by traders every day. I focus on conversion-driven UX, scalable design systems and AI-powered design workflows.",
+  intro: "For the past 8+ years, I've designed eCommerce, quick commerce, crypto and fintech products across Saudi Arabia, the UAE, Malaysia, the UK and Pakistan, from 50+ food delivery and grocery apps to crypto exchanges used by traders every day. I focus on conversion-driven UX, scalable design systems and AI-powered design workflows.",
 
   experience: [
     { company:"Jazi", tag:"Large-scale eCommerce in Saudi Arabia", date:"Feb 25-Now", role:"Lead Product Designer / Head of Design",
@@ -97,7 +97,7 @@ const DATA = {
   story: [
     "I started out pushing pixels in design tools, making screens that looked good in a mockup and then watching them change once they reached the browser. That gap between the design and what shipped bothered me more than anything else.",
     "So I learned front-end development. Not to switch careers, but to close that gap myself. Once I could build what I designed, my designs changed too: fewer impossible states, more attention to spacing, motion and how components behave with real data.",
-    "Over 10 years that took me from food delivery and grocery apps in Lahore, to eCommerce for UK brands, to crypto trading in Dubai and Kuala Lumpur. Today I lead product design at Jazi in Riyadh, working across both sides: designing the experience and building polished, production-ready components. I care about the small details users feel but rarely notice.",
+    "Over 8+ years that took me from food delivery and grocery apps in Lahore, to eCommerce for UK brands, to crypto trading in Dubai and Kuala Lumpur. Today I lead product design at Jazi in Riyadh, working across both sides: designing the experience and building polished, production-ready components. I care about the small details users feel but rarely notice.",
     "Next, I want to keep working on products where design and engineering sit at the same table, and where good UI makes complex things feel simple."
   ],
 
