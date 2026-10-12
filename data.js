@@ -3,6 +3,7 @@ const DATA = {
   name: "Aftab",
   domain: "aftab.me",
   linkedin: "https://www.linkedin.com/in/maftabuiux",
+  photo: "images/aftab.jpg",
   headline: "I design products, then I build them.",
   headlineMuted: "Currently Lead Product Designer / Head of Design at Jazi in Riyadh.",
   intro: "For 8+ years, I've designed the moments where people shop, pay and trade, from eCommerce checkouts in Riyadh to crypto exchanges in Dubai. I turn complex journeys into simple, high-converting experiences, backed by scalable design systems and AI-powered workflows.",
@@ -96,7 +97,7 @@ const DATA = {
 
   /* ===== STORY PAGE =====  photo: "images/aftab.jpg" (GitHub par upload karke path likhein) */
   storyPage: {
-    photo: "",
+    photo: "images/aftab.jpg",
     headline: "From food delivery apps in Lahore to leading design in Riyadh.",
     subtitle: "An 8+ year journey through quick commerce, eCommerce, crypto and fintech, and what each one taught me about designing for real people.",
     sections: [

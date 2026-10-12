@@ -105,7 +105,7 @@ ul.ask li{margin-top:4px}
 .cs-next span{display:block;color:var(--faint);font-size:13px;font-weight:400;margin-bottom:4px}
 .zoom{position:fixed;inset:0;background:rgba(0,0,0,.88);display:grid;place-items:center;z-index:50;cursor:zoom-out;padding:16px;animation:in .2s ease}
 .zoom img{max-width:100%;max-height:100%;border-radius:10px}
-.st-photo{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:24px;display:block}
+.portrait{width:132px;height:132px;border-radius:32px;object-fit:cover;display:block;margin-bottom:28px;filter:grayscale(1);background:var(--card)}
 .st-sec{margin-top:44px}
 .st-sec h2{color:var(--fg);font-size:16px;margin-bottom:0}
 .st-sec p{color:var(--muted);margin-top:12px;line-height:1.75}
@@ -142,6 +142,7 @@ const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'
 
 const pages = {
   home: () => `
+    ${DATA.photo?`<img class="portrait" src="${esc(DATA.photo)}" alt="${esc(DATA.name)}" width="132" height="132">`:''}
     <h1>${esc(DATA.headline)} <span class="m">${esc(DATA.headlineMuted)}</span></h1>
     <p class="lead">${esc(DATA.intro)}</p>
     <a class="btn" href="#/mcp">Ask AI <span aria-hidden="true">→</span></a>
@@ -172,7 +173,7 @@ const pages = {
       </article>`).join('')}</div>`,
 
   story: () => { const S = DATA.storyPage; return `
-    ${S.photo?`<img class="st-photo" src="${esc(S.photo)}" alt="${esc(DATA.name)}">`:''}
+    ${S.photo?`<img class="portrait" src="${esc(S.photo)}" alt="${esc(DATA.name)}" width="132" height="132">`:''}
     <div class="eyebrow">Story</div>
     <h1>${esc(S.headline)}</h1>
     <p class="lead">${esc(S.subtitle)}</p>
