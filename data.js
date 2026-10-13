@@ -41,7 +41,7 @@ const DATA = {
       cover:"images/wayment/cover.webp",
       summary:"A fintech product that issues a virtual Visa or Mastercard in minutes, tops it up with crypto or a local bank card, and gets people paying for global services again. I designed the design system, the Telegram Mini App and the marketing website.",
       stats:[ {value:"30+", label:"components with every state covered"}, {value:"2", label:"themes, light and dark, from one token set"}, {value:"3", label:"card types built around real user needs"} ],
-      meta:[ ["Role","Product Designer (freelance)"], ["Scope","Design system, Telegram Mini App, website"],
+      meta:[ ["Role","Product Designer"], ["Scope","Design system, Telegram Mini App, website"],
              ["Platform","Telegram Mini App on iOS and Android, web"], ["Engagement","Freelance project via Fiverr"] ],
       sections:[
         { heading:"Overview", text:["Wayment issues a virtual Visa or Mastercard in a few minutes, so people can pay for international services and shop at online stores abroad. Cards are topped up with cryptocurrency or a Russian bank card, and the whole experience lives inside a Telegram Mini App."],
