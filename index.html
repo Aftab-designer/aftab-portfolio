@@ -173,8 +173,7 @@ const pages = {
       <ol class="work">${DATA.work.map(w=>`
         <li><a href="#/work/${w.slug}">
           <div class="thumb" style="background:${w.color}">${w.cover?`<img src="${esc(w.cover)}" alt="" style="width:100%;height:100%;object-fit:cover">`:esc(w.mark)}</div>
-          <h3>${esc(w.title)}<span>${esc(w.date)}</span></h3>
-          <p>${esc(w.summary)}</p>
+          <h3>${esc(w.title)}${w.date?`<span>${esc(w.date)}</span>`:''}</h3>
         </a></li>`).join('')}</ol>
     </section>`,
 

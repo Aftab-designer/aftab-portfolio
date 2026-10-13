@@ -35,7 +35,7 @@ const DATA = {
      src khali ("") ho to placeholder box dikhega — image daalte hi asli picture aa jayegi.
      Har section mein jitni chahein images add karein. */
   work: [
-    { slug:"wayment", dark:true, eyebrow:"Wayment · Fintech · Freelance", date:"Freelance",
+    { slug:"wayment", dark:true, eyebrow:"Wayment · Fintech", date:"",
       title:"Wayment: virtual Visa and Mastercard cards for paying anywhere in the world",
       color:"linear-gradient(135deg,#0b0b0b,#2b2b2b)", mark:"Wayment",
       cover:"images/wayment/cover.webp",
