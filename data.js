@@ -224,8 +224,8 @@ const DATA = {
   /* ===== STORY PAGE =====  photo: "images/aftab.jpg" (GitHub par upload karke path likhein) */
   storyPage: {
     photo: "images/aftab.jpg",
-    headline: "From food delivery apps in Lahore to leading design in Riyadh.",
-    subtitle: "An 8+ year journey through quick commerce, eCommerce, crypto and fintech, and what each one taught me about designing for real people.",
+    headline: "I design products, then I build them.",
+    subtitle: "Currently Lead Product Designer / Head of Design at Jazi in Riyadh.",
     sections: [
       { heading: "Where it started",
         text: ["I studied Computer Science at National Textile University, but the part I kept coming back to was never the code on its own. It was the interface: why one screen feels effortless and another makes people give up. Before I had even graduated, I was designing real products used by real customers."] },
