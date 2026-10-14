@@ -170,7 +170,7 @@ const pages = {
         </div>`).join('')}
     </section>
     <section><h2>Work</h2>
-      <ol class="work">${DATA.work.map(w=>`
+      <ol class="work">${DATA.work.filter(w=>!w.draft).map(w=>`
         <li><a href="#/work/${w.slug}">
           <div class="thumb" style="background:${w.color}">${w.cover?`<img src="${esc(w.cover)}" alt="" style="width:100%;height:100%;object-fit:cover">`:esc(w.mark)}</div>
           <h3>${esc(w.title)}${w.date?`<span>${esc(w.date)}</span>`:''}</h3>
@@ -230,7 +230,7 @@ const pages = {
 
   work: slug => {
     const i = DATA.work.findIndex(x=>x.slug===slug); if(i<0) return pages.home();
-    const w = DATA.work[i], next = DATA.work[(i+1)%DATA.work.length];
+    const w = DATA.work[i], pub = DATA.work.filter(x=>!x.draft), next = pub[(pub.indexOf(w)+1)%pub.length] || pub[0];
     const fig = im => `<figure class="cs-fig">${im.src
         ? `<img src="${esc(im.src)}" alt="${esc(im.caption||'')}" loading="lazy" data-zoom>`
         : `<div class="cs-ph" style="background:${w.color}"><span>Image</span></div>`}
@@ -252,7 +252,7 @@ const pages = {
           ${s.numbered?list(s.numbered,true):''}
           ${(s.images||[]).map(fig).join('')}
         </section>`).join('')}
-      ${DATA.work.length>1?`<a class="cs-next" href="#/work/${next.slug}"><span>Next case study</span>${esc(next.title)} →</a>`:''}`;
+      ${pub.length>1?`<a class="cs-next" href="#/work/${next.slug}"><span>Next case study</span>${esc(next.title)} →</a>`:''}`;
   }
 };
 
