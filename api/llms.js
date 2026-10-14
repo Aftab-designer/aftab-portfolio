@@ -14,7 +14,7 @@ module.exports = (req, res) => {
     ...D.experience.map(x => `- ${x.company} (${x.date}) — ${x.role}: ${x.text}`),
     ``,
     `## Case studies`,
-    ...D.work.map(w => `- [${w.title}](${site}/#/work/${w.slug}) (${w.date}): ${w.summary}`),
+    ...D.work.filter(w => !w.draft).map(w => `- [${w.title}](${site}/#/work/${w.slug}) (${w.date}): ${w.summary}`),
     ``,
     `## Posts`,
     ...D.posts.map(p => `- ${p.title}: ${p.text}`),

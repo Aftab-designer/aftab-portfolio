@@ -2,7 +2,8 @@
 const D = require('../data.js');
 
 const site = `https://${D.domain}`;
-const work = () => D.work.map(w => ({ title: w.title, date: w.date, summary: w.summary, url: `${site}/#/work/${w.slug}` }));
+const PUB = D.work.filter(w => !w.draft);
+const work = () => PUB.map(w => ({ title: w.title, date: w.date, summary: w.summary, url: `${site}/#/work/${w.slug}` }));
 
 const TOOLS = {
   search_portfolio: {
@@ -12,7 +13,7 @@ const TOOLS = {
       const q = query.toLowerCase();
       const items = [
         ...D.experience.map(x => ({ type: 'role', ...x })),
-        ...D.work.map(w => ({ type: 'case_study', title: w.title, summary: w.summary, sections: w.sections })),
+        ...PUB.map(w => ({ type: 'case_study', title: w.title, summary: w.summary, sections: w.sections })),
         ...D.posts.map(p => ({ type: 'post', title: p.title, text: p.text })),
         ...D.story.map(s => ({ type: 'story', text: s })),
       ];
@@ -31,11 +32,11 @@ const TOOLS = {
     inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'] },
     run: ({ id = '' }) => {
       if (id.toLowerCase() === 'story') return { title: 'Story', text: D.story.join('\n\n') };
-      const w = D.work.find(x => x.slug === id || x.title.toLowerCase().includes(id.toLowerCase()));
+      const w = PUB.find(x => x.slug === id || x.title.toLowerCase().includes(id.toLowerCase()));
       return w ? { title: w.title, summary: w.summary, stats: w.stats, meta: Object.fromEntries(w.meta || []),
                    sections: (w.sections || []).map(s => ({ heading: s.heading, text: (s.text || []).join('\n\n'),
                      points: [...(s.points || []), ...(s.numbered || [])], images: (s.images || []).map(i => i.caption) })) }
-               : { error: `Not found. Available: ${D.work.map(x => x.slug).join(', ')}, story` };
+               : { error: `Not found. Available: ${PUB.map(x => x.slug).join(', ')}, story` };
     },
   },
   list_posts: { description: 'Titles of experiments on the posts page.', run: () => D.posts.map(p => p.title) },
