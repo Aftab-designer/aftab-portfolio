@@ -215,6 +215,9 @@ const DATA = {
 
   /* art: dashboard | mobile | chat | component | palette | chart */
   posts: [
+    { title:"Flare app dissection",
+      images:[ {src:"images/posts/flare-app-dissection.By0V94nD_ZPtDMY.webp", alt:"Proposed Flare home screen with annotations, attention heatmap, swipe-up tray and full-screen video"} ],
+      text:"Flare is a shopping app for women's dresses that uses TikTok-style videos to turn browsing into discovery and drive product sales. I dissected the existing design to find friction points, then proposed changes to lift engagement and conversion. The new home gives 70% of the screen to a video banner and 30% to tabs and personalised tiles. Search moves to the top, the profile moves into the menu, a swipe up opens new arrivals and recommendations, and a swipe down turns the banner into a full-screen shoppable video." },
     { title:"Upvotes & downvotes component",
       video:"images/posts/upvotes-downvotes-component.O6cRlBS-.mp4", w:1280, h:1104,
       text:"Experimenting with upvotes and downvotes on ideas, tools and visuals. Cards load in with a soft skeleton, then appear one by one, each with a vote count you can nudge up or down in a single tap. Small motion, clear feedback, nothing in the way of the content." },
