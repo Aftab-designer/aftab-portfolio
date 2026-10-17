@@ -215,6 +215,9 @@ const DATA = {
 
   /* art: dashboard | mobile | chat | component | palette | chart */
   posts: [
+    { title:"Closing the feedback loop in Figma",
+      video:"images/posts/figma-feedback.mp4", w:1600, h:1130,
+      text:"Good design reviews happen where the design lives. Here the client asked to swap in the screenshots on the right because they were sharper and covered every module, and I replied in the same thread on the frame. Keeping feedback pinned to the exact screen means nothing gets lost in chat, everyone sees the decision, and the next version starts from it." },
     { title:"Flare app dissection",
       images:[ {src:"images/posts/flare-app-dissection.By0V94nD_ZPtDMY.webp", alt:"Proposed Flare home screen with annotations, attention heatmap, swipe-up tray and full-screen video"} ],
       text:"Flare is a shopping app for women's dresses that uses TikTok-style videos to turn browsing into discovery and drive product sales. I dissected the existing design to find friction points, then proposed changes to lift engagement and conversion. The new home gives 70% of the screen to a video banner and 30% to tabs and personalised tiles. Search moves to the top, the profile moves into the menu, a swipe up opens new arrivals and recommendations, and a swipe down turns the banner into a full-screen shoppable video." },
