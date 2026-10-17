@@ -184,7 +184,7 @@ const pages = {
     <h1>Experiments, ideas, and works in progress.</h1></div>
     <div style="margin-top:40px">${DATA.posts.map(p=>`
       <article class="post">
-        ${p.images?p.images.map(i=>`<img class="post-img" src="${esc(i.src)}" alt="${esc(i.alt||p.title)}" loading="lazy">`).join(''):`<div class="thumb" style="background:${p.color}">${art(p.art)}</div>`}
+        ${p.video?`<video class="post-img" src="${esc(p.video)}" ${p.w?`width="${p.w}" height="${p.h}"`:''} style="background:transparent" autoplay muted loop playsinline preload="auto" aria-label="${esc(p.title)}"></video>`:p.images?p.images.map(i=>`<img class="post-img" src="${esc(i.src)}" alt="${esc(i.alt||p.title)}" loading="lazy">`).join(''):`<div class="thumb" style="background:${p.color}">${art(p.art)}</div>`}
         <h2>${esc(p.title)}</h2><p>${esc(p.text)}</p>
       </article>`).join('')}</div>`,
 

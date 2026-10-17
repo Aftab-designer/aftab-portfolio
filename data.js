@@ -215,6 +215,9 @@ const DATA = {
 
   /* art: dashboard | mobile | chat | component | palette | chart */
   posts: [
+    { title:"Upvotes & downvotes component",
+      video:"images/posts/upvotes-downvotes-component.O6cRlBS-.mp4", w:1280, h:1104,
+      text:"Experimenting with upvotes and downvotes on ideas, tools and visuals. Cards load in with a soft skeleton, then appear one by one, each with a vote count you can nudge up or down in a single tap. Small motion, clear feedback, nothing in the way of the content." },
     { title:"Facil Pay: send crypto like a text message",
       images:[ {src:"images/posts/facil-chat-pay.webp", alt:"Facil Pay chat with a 250 USDC payment sheet"} ],
       text:"Facil Pay is a crypto wallet powered by AI and user-intent blockchain technology. The idea is simple: payments belong inside the conversation. You chat with a friend, tap Pay, pick a token like USDC and send it, with your balance and a note on the same sheet. No switching apps, no leaving the chat. Chat. Pay. Done." },
