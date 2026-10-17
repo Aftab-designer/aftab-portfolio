@@ -107,6 +107,7 @@ const DATA = {
       title:"Kwala: turning team meetings into clear decisions and next steps",
       color:"linear-gradient(135deg,#2a1f7a,#6b4dff)", mark:"Kwala",
       cover:"images/kwala/658af721191810b77772f0bf_20.webp",
+      thumb:"images/kwala/Thumbnail%20New.webp",
       summary:"A web app that helps teams plan focused meetings, run them on time and leave with clear tasks and decisions. I designed the product end to end, from research and user journeys to the UI kit and final screens.",
       stats:[ {value:"4", label:"stages from research to developer specs"}, {value:"3", label:"personas with journey maps"}, {value:"5", label:"core areas: meetings, tasks, planner, analytics, feedback"} ],
       meta:[ ["Role","Product Designer"], ["Scope","Research, personas and journey maps, use cases, wireframes, UI kit, high-fidelity design"],
