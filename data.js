@@ -141,6 +141,7 @@ const DATA = {
       title:"Glam 7: salon booking with an AI preview of your future look",
       color:"linear-gradient(135deg,#1a1033,#5b2bd6)", mark:"Glam 7",
       cover:"images/glam/cover.webp",
+      thumb:"images/glam/Thumbnail.jpg",
       summary:"A beauty platform where customers choose a salon, book a service and see their future look with AI before they sit in the chair, and where salons run appointments, teams and hiring from one portal. I designed the sitemaps, user flows, design system, salon portal and website.",
       stats:[ {value:"3", label:"portals mapped: customer, salon and vendor"}, {value:"AI", label:"preview of the future look before booking"}, {value:"1", label:"calendar for every branch and specialist"} ],
       meta:[ ["Role","Product Designer"], ["Scope","Sitemaps, user flows, design system, salon portal, website"],

@@ -174,7 +174,7 @@ const pages = {
     <section><h2>Work</h2>
       <ol class="work">${DATA.work.filter(w=>!w.draft).map(w=>`
         <li><a href="#/work/${w.slug}">
-          <div class="thumb" style="background:${w.color}">${w.cover?`<img src="${esc(w.cover)}" alt="" style="width:100%;height:100%;object-fit:cover">`:esc(w.mark)}</div>
+          <div class="thumb" style="background:${w.color}">${(w.thumb||w.cover)?`<img src="${esc(w.thumb||w.cover)}" alt="" style="width:100%;height:100%;object-fit:cover"${w.thumb&&w.cover?` onerror="this.onerror=null;this.src='${esc(w.cover)}'"`:''}>`:esc(w.mark)}</div>
           <h3>${esc(w.title)}${w.date?`<span>${esc(w.date)}</span>`:''}</h3>
         </a></li>`).join('')}</ol>
     </section>`,
