@@ -216,7 +216,7 @@ const DATA = {
   /* art: dashboard | mobile | chat | component | palette | chart */
   posts: [
     { title:"Closing the feedback loop in Figma",
-      video:"images/posts/figma-feedback.mp4", w:1600, h:1130,
+      video:"images/posts/New%20post.mov", w:2318, h:1638,
       text:"Good design reviews happen where the design lives. Here the client asked to swap in the screenshots on the right because they were sharper and covered every module, and I replied in the same thread on the frame. Keeping feedback pinned to the exact screen means nothing gets lost in chat, everyone sees the decision, and the next version starts from it." },
     { title:"Flare app dissection",
       images:[ {src:"images/posts/flare-app-dissection.By0V94nD_ZPtDMY.webp", alt:"Proposed Flare home screen with annotations, attention heatmap, swipe-up tray and full-screen video"} ],
