@@ -216,25 +216,8 @@ const DATA = {
   /* art: dashboard | mobile | chat | component | palette | chart */
   posts: [
     { title:"Facil Pay: send crypto like a text message",
-      images:[ {src:"images/posts/facil-hero.webp", alt:"Facil Pay landing page: Send and receive crypto like a text message"},
-               {src:"images/posts/facil-chat-pay.webp", alt:"Facil Pay chat with a 250 USDC payment sheet"} ],
+      images:[ {src:"images/posts/facil-chat-pay.webp", alt:"Facil Pay chat with a 250 USDC payment sheet"} ],
       text:"Facil Pay is a crypto wallet powered by AI and user-intent blockchain technology. The idea is simple: payments belong inside the conversation. You chat with a friend, tap Pay, pick a token like USDC and send it, with your balance and a note on the same sheet. No switching apps, no leaving the chat. Chat. Pay. Done." },
-    { title:"Facil Pay: a wallet that feels calm",
-      images:[ {src:"images/posts/facil-coins.webp", alt:"Facil Pay: coins above a phone showing a sending payment status"},
-               {src:"images/posts/facil-wallet.webp", alt:"Facil Pay wallet home screen with balance, actions and assets"} ],
-      text:"The home screen of the Facil Pay wallet. Your total balance and 24-hour change sit on top, the four things people do most (Receive, Send, Swap, Buy) are one tap away, and every asset shows its amount and value in a simple list. While a payment is on its way, a live status shows the progress so you never wonder whether it went through." },
-    { title:"Trading admin, but calm", art:"dashboard", color:"linear-gradient(135deg,#0f172a,#1e293b)",
-      text:"Admin panels for trading platforms usually shout at you: red, green, blinking numbers everywhere. I tried the opposite on an AI trading dashboard. Neutral surfaces, colour only where a decision is needed, and alerts that wait their turn. Operators scanned the overview much faster in early tests." },
-    { title:"A prompt box with states", art:"chat", color:"linear-gradient(135deg,#4c1d95,#7c3aed)",
-      text:"Most AI inputs are one textarea pretending to do everything. I broke it into states: idle, typing, attaching, thinking and error. Each one gets its own small motion so you always know what the model is doing. Built in React with a single state machine." },
-    { title:"Status pills that don't lie", art:"component", color:"linear-gradient(135deg,#0e7490,#22d3ee)",
-      text:"A tiny component with a big job. Pending, active, failed, paused, each with colour, icon and text so it still works for colour-blind users and in dark mode. Shipped as one token-driven component instead of five copies." },
-    { title:"Building a palette from one colour", art:"palette", color:"linear-gradient(135deg,#a16207,#facc15)",
-      text:"Pick one brand colour and generate a full 50 to 900 scale with contrast checks baked in. I wanted something that tells you instantly which text colour is safe on which background, without opening a separate checker." },
-    { title:"Charts for people who skim", art:"chart", color:"linear-gradient(135deg,#166534,#4ade80)",
-      text:"Experimenting with chart defaults: direct labels instead of legends, one highlighted series, everything else in grey. Less to decode, faster to read. Small change, big difference on busy dashboards." },
-    { title:"Onboarding in three screens", art:"mobile", color:"linear-gradient(135deg,#9f1239,#fb7185)",
-      text:"How short can onboarding get before it stops working? This concept does it in three screens: who you are, what you want, and a first win. Everything else moves to the moment it's actually needed." },
   ],
 
   /* ===== STORY PAGE =====  photo: "images/aftab.jpg" (GitHub par upload karke path likhein) */
