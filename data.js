@@ -39,6 +39,7 @@ const DATA = {
       title:"Jazi: a fashion shopping app built for speed, trust and Saudi shoppers",
       color:"linear-gradient(135deg,#1b1026,#723e9e)", mark:"Jazi",
       cover:"images/jazi/home.webp",
+      thumb:"images/jazi/Cover.jpg",
       summary:"Jazi is a large-scale fashion eCommerce app in Saudi Arabia. As Lead Product Designer and Head of Design, I own the product end to end: the customer app on iOS and Android, the admin dashboard, the design system and every flow from discovery to delivery and returns.",
       stats:[ {value:"12+", label:"end-to-end flows designed and versioned in Figma"}, {value:"2", label:"languages, English and Arabic, in one experience"}, {value:"18", label:"colour variables powering one design system"} ],
       meta:[ ["Role","Lead Product Designer / Head of Design"], ["Scope","UX strategy, end-to-end product design, design system, admin dashboard"],
