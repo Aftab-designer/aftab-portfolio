@@ -253,7 +253,7 @@ const pages = {
     const list = (arr, num) => `<ol class="${num?'cs-num':'cs-points'}">${arr.map((p,k)=>`<li>${num?`<span class="n">${String(k+1).padStart(2,'0')}</span>`:''}<div><h3>${esc(p.title)}</h3>${p.text?`<p>${esc(p.text)}</p>`:''}</div></li>`).join('')}</ol>`;
     return `
       <a class="back" href="#/">← Back</a>
-      <div class="cs-hero" style="background:${w.color}">${w.cover?`<img src="${esc(w.cover)}" alt="" data-zoom>`:`<span>${esc(w.mark)}</span>`}</div>
+      <div class="cs-hero" style="background:${w.color}">${w.heroVideo?`<video src="${esc(w.heroVideo)}" ${w.heroPoster?`poster="${esc(w.heroPoster)}"`:''} autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;display:block" aria-label="${esc(w.title)}"></video>`:w.cover?`<img src="${esc(w.cover)}" alt="" data-zoom>`:`<span>${esc(w.mark)}</span>`}</div>
       ${w.eyebrow?`<div class="eyebrow" style="margin-top:32px">${esc(w.eyebrow)}</div>`:''}
       <h1 ${w.eyebrow?'':'style="margin-top:32px"'}>${esc(w.title)}</h1>
       <p class="lead">${esc(w.summary)}</p>
