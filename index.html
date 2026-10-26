@@ -55,6 +55,9 @@ h1 .m{color:var(--muted)}
 .lead{color:var(--muted);margin-top:16px;max-width:520px}
 .btn{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:9px 16px;border-radius:999px;background:var(--fg);color:var(--bg);text-decoration:none;font-size:14px;font-weight:500;transition:transform .2s}
 .btn:hover{transform:translateY(-1px)}
+.cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn-ghost:hover{background:var(--card)}
 .eyebrow{font-size:13px;color:var(--faint);margin-bottom:12px}
 section{margin-top:72px}
 h2{font-size:14px;font-weight:500;color:var(--faint);margin-bottom:20px}
@@ -178,7 +181,7 @@ const pages = {
     <a class="sig hero-sig" href="#/" aria-label="Home">${esc(DATA.name)}</a>
     <h1>${esc(DATA.headline)} <span class="m">${esc(DATA.headlineMuted)}</span></h1>
     <p class="lead">${esc(DATA.intro)}</p>
-    <a class="btn" href="#/mcp">Ask AI <span aria-hidden="true">→</span></a>
+    <div class="cta-row"><a class="btn" href="#/mcp">Ask AI <span aria-hidden="true">→</span></a>${DATA.cv?`<a class="btn btn-ghost" href="${esc(DATA.cv)}" download="Muhammad-Aftab-Lead-Product-Designer-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>`:''}</div>
     </div>
     <section><h2>Experience</h2>
       ${DATA.experience.map(x=>`
@@ -215,7 +218,7 @@ const pages = {
     <p class="lead">${esc(S.subtitle)}</p>
     </div>
     ${S.sections.map(s=>`<section class="st-sec"><h2>${esc(s.heading)}</h2>${s.text.map(t=>`<p>${esc(t)}</p>`).join('')}</section>`).join('')}
-    <a class="cs-next" href="#/mcp"><span>Want the short version?</span>Ask AI about my work →</a>`; },
+    <a class="cs-next" href="#/mcp"><span>Want the short version?</span>Ask AI about my work →</a>${DATA.cv?`<a class="cs-next" href="${esc(DATA.cv)}" download="Muhammad-Aftab-Lead-Product-Designer-CV.pdf"><span>Prefer a PDF?</span>Download my CV ↓</a>`:''}`; },
 
   mcp: () => `
     <div class="hero"><div class="eyebrow">MCP</div>

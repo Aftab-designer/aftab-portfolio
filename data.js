@@ -2,6 +2,7 @@
 const DATA = {
   name: "Aftab",
   domain: "aftab.me",
+  cv: "cv/Head%20of%20Design.pdf",
   linkedin: "https://www.linkedin.com/in/maftabuiux",
   contact: { email: "info.aftabdesigner@gmail.com", phone: "+966581265357", whatsapp: "+966581265357" },
   photo: "images/aftab.jpg",
