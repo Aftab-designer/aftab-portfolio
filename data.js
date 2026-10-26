@@ -302,6 +302,15 @@ const DATA = {
 
   /* art: dashboard | mobile | chat | component | palette | chart */
   posts: [
+    { title:"Exploring Figma Make",
+      video:"images/posts/Figma%20Make.mp4", w:720, h:406,
+      text:"From a prompt to a working product page, then back into editable design layers with one click. The gap between idea, prototype and design file keeps getting smaller. For product designers, the craft is shifting from drawing every screen to directing, editing and deciding what is right for the user." },
+    { title:"Code layers: designing with real behaviour",
+      video:"images/posts/code%20layer.mp4", w:720, h:406,
+      text:"Describe a component and get real code right on the canvas: here an analog clock with props for border and hand colours, live and interactive next to the rest of the design. Designing with real behaviour instead of static frames means fewer surprises at handoff." },
+    { title:"Light as an interaction",
+      video:"images/posts/sun-v5.mp4", w:1436, h:1080,
+      text:"A small experiment in direct manipulation: drag the sun and the light across the portrait follows it. Playful details like this make an interface feel alive, and they are a reminder that light and motion can carry as much meaning as layout." },
     { title:"Closing the feedback loop in Figma",
       video:"images/posts/replace%20video.mov", w:2318, h:1522,
       text:"Good design reviews happen where the design lives. Here the client asked to swap in the screenshots on the right because they were sharper and covered every module, and I replied in the same thread on the frame. Keeping feedback pinned to the exact screen means nothing gets lost in chat, everyone sees the decision, and the next version starts from it." },
