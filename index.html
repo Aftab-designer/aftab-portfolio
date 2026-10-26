@@ -181,7 +181,7 @@ const pages = {
     <a class="sig hero-sig" href="#/" aria-label="Home">${esc(DATA.name)}</a>
     <h1>${esc(DATA.headline)} <span class="m">${esc(DATA.headlineMuted)}</span></h1>
     <p class="lead">${esc(DATA.intro)}</p>
-    <div class="cta-row"><a class="btn" href="#/mcp">Ask AI <span aria-hidden="true">→</span></a>${DATA.cv?`<a class="btn btn-ghost" href="${esc(DATA.cv)}" download="Muhammad-Aftab-Lead-Product-Designer-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>`:''}</div>
+    <div class="cta-row"><a class="btn" href="#/mcp">Ask AI <span aria-hidden="true">→</span></a>${DATA.cv?`<a class="btn btn-ghost" href="${esc(DATA.cv)}" download="Muhammad-Aftab-Lead-Product-Designer-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>`:''}${DATA.linkedin?`<a class="btn btn-ghost" href="${esc(DATA.linkedin)}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>`:''}</div>
     </div>
     <section><h2>Experience</h2>
       ${DATA.experience.map(x=>`
@@ -326,7 +326,8 @@ $('#copy').innerHTML = `© ${new Date().getFullYear()} ${esc(DATA.name)}`;
 if (DATA.contact) { const C = DATA.contact; $('#contact').innerHTML = [
   C.email && `<a href="mailto:${esc(C.email)}"><span>Email</span>${esc(C.email)}</a>`,
   C.phone && `<a href="tel:${esc(C.phone)}"><span>Phone</span>${esc(C.phone)}</a>`,
-  C.whatsapp && `<a href="https://wa.me/${esc(C.whatsapp.replace(/\D/g,''))}" target="_blank" rel="noopener"><span>WhatsApp</span>${esc(C.whatsapp)}</a>`
+  C.whatsapp && `<a href="https://wa.me/${esc(C.whatsapp.replace(/\D/g,''))}" target="_blank" rel="noopener"><span>WhatsApp</span>${esc(C.whatsapp)}</a>`,
+  DATA.linkedin && `<a href="${esc(DATA.linkedin)}" target="_blank" rel="noopener"><span>LinkedIn</span>maftabuiux</a>`
 ].filter(Boolean).join(''); }
 $('#tt').onclick = () => {
   const r=document.documentElement, dark = r.dataset.theme ? r.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
