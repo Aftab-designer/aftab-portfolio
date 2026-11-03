@@ -255,7 +255,9 @@ const pages = {
   work: slug => {
     const i = DATA.work.findIndex(x=>x.slug===slug); if(i<0) return pages.home();
     const w = DATA.work[i], pub = DATA.work.filter(x=>!x.draft), next = pub[(pub.indexOf(w)+1)%pub.length] || pub[0];
-    const fig = im => `<figure class="cs-fig">${im.src
+    const fig = im => `<figure class="cs-fig">${im.video
+        ? `<video src="${esc(im.video)}" autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;display:block" aria-label="${esc(im.caption||'')}"></video>`
+        : im.src
         ? `<img src="${esc(im.src)}" alt="${esc(im.caption||'')}" loading="lazy" data-zoom>`
         : `<div class="cs-ph" style="background:${w.color}"><span>Image</span></div>`}
       ${im.caption?`<figcaption>${esc(im.caption)}</figcaption>`:''}</figure>`;
