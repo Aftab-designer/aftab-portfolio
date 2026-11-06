@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aftab · Product Designer</title>
+<title>Muhammad Aftab · Lead Product Designer</title>
 <meta name="description" content="Lead Product Designer / Head of Design at Jazi. 8+ years designing eCommerce, crypto and fintech products. Case studies, posts and story.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aftab">
-<meta property="og:title" content="Aftab · Product Designer">
+<meta property="og:title" content="Muhammad Aftab · Lead Product Designer">
 <meta property="og:description" content="Lead Product Designer / Head of Design at Jazi. 8+ years designing eCommerce, crypto and fintech products. Case studies, posts and story.">
 <meta property="og:url" content="https://aftab-portfolio-two.vercel.app/">
 <meta property="og:image" content="https://aftab-portfolio-two.vercel.app/images/Aftab%20Thumbnaik.png">
@@ -15,7 +15,7 @@
 <meta property="og:image:height" content="1881">
 <meta property="og:image:alt" content="Aftab, Lead Product Designer: I design products, then I build them. eCommerce, crypto and fintech, 8+ years.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aftab · Product Designer">
+<meta name="twitter:title" content="Muhammad Aftab · Lead Product Designer">
 <meta name="twitter:description" content="Lead Product Designer / Head of Design at Jazi. 8+ years designing eCommerce, crypto and fintech products. Case studies, posts and story.">
 <meta name="twitter:image" content="https://aftab-portfolio-two.vercel.app/images/Aftab%20Thumbnaik.png">
 <meta name="theme-color" content="#ffffff">
@@ -178,11 +178,15 @@ const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'
 const pages = {
   home: () => `
     <div class="hero">
-    <a class="sig hero-sig" href="#/" aria-label="Home">${esc(DATA.name)}</a>
+    <a class="sig hero-sig" href="#/" aria-label="Home">${esc(DATA.fullName||DATA.name)}</a>
     <h1>${esc(DATA.headline)} <span class="m">${esc(DATA.headlineMuted)}</span></h1>
     <p class="lead">${esc(DATA.intro)}</p>
     <div class="cta-row"><a class="btn" href="#/mcp">Ask AI <span aria-hidden="true">→</span></a>${DATA.cv?`<a class="btn btn-ghost" href="${esc(DATA.cv)}" download="Muhammad-Aftab-Lead-Product-Designer-CV.pdf">Download CV <span aria-hidden="true">↓</span></a>`:''}${DATA.linkedin?`<a class="btn btn-ghost" href="${esc(DATA.linkedin)}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>`:''}</div>
     </div>
+    <section><h2>Work</h2>
+      <ol class="work">${DATA.work.filter(w=>!w.draft).slice(0,3).map(workItem).join('')}</ol>
+      ${DATA.work.filter(w=>!w.draft).length>3?`<a class="view-all" href="#/projects">View all projects (${DATA.work.filter(w=>!w.draft).length}) →</a>`:''}
+    </section>
     <section><h2>Experience</h2>
       ${DATA.experience.map(x=>`
         <div class="xp" tabindex="0">
@@ -190,10 +194,6 @@ const pages = {
           <div class="role">${esc(x.role)}</div>
           <p>${esc(x.text)}</p>
         </div>`).join('')}
-    </section>
-    <section><h2>Work</h2>
-      <ol class="work">${DATA.work.filter(w=>!w.draft).slice(0,3).map(workItem).join('')}</ol>
-      ${DATA.work.filter(w=>!w.draft).length>3?`<a class="view-all" href="#/projects">View all projects (${DATA.work.filter(w=>!w.draft).length}) →</a>`:''}
     </section>`,
 
   projects: () => `
@@ -320,8 +320,8 @@ function route(){
   $('#app').innerHTML = key==='work' ? pages.work(s) : (pages[key]||pages.home)();
   $('#app').style.animation='none'; void $('#app').offsetWidth; $('#app').style.animation='';
   document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on', a.getAttribute('href')===`#/${p}`));
-  const t = {home:'Product Designer',projects:'Work',posts:'Posts',story:'Story',mcp:'MCP server',work:'Case study'}[key]||'Product Designer';
-  document.title = `${DATA.name} · ${t}`;
+  const t = {home:'Lead Product Designer',projects:'Work',posts:'Posts',story:'Story',mcp:'MCP server',work:'Case study'}[key]||'Product Designer';
+  document.title = `${DATA.fullName||DATA.name} · ${t}`;
   scrollTo(0,0);
 }
 $('#copy').innerHTML = `© ${new Date().getFullYear()} ${esc(DATA.name)}`;

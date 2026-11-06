@@ -1,6 +1,7 @@
 /* APNI DETAILS SIRF YAHAN BADLEIN — website, MCP server aur llms.txt teeno yahin se chalte hain */
 const DATA = {
   name: "Aftab",
+  fullName: "Muhammad Aftab",
   domain: "aftab.me",
   cv: "cv/Head%20of%20Design.pdf",
   linkedin: "https://www.linkedin.com/in/maftabuiux",
@@ -11,15 +12,15 @@ const DATA = {
   intro: "For 8+ years, I've designed the moments where people shop, pay and trade, from eCommerce checkouts in Riyadh to crypto exchanges in Dubai. I turn complex journeys into simple, high-converting experiences, backed by scalable design systems and AI-powered workflows.",
 
   experience: [
-    { company:"Jazi", tag:"Large-scale eCommerce in Saudi Arabia", date:"Feb 25-Now", role:"Lead Product Designer / Head of Design",
+    { company:"Jazi", tag:"Large-scale eCommerce in Saudi Arabia", date:"Feb 2025 – Present", role:"Lead Product Designer / Head of Design",
       text:"Own end-to-end product design for Jazi's eCommerce mobile app, from discovery to launch. Set the UX strategy and lead the design system, redesigned product discovery, cart, checkout and vendor journeys for conversion, and introduced AI-powered workflows for research, ideation and prototyping." },
-    { company:"TinyTrader", tag:"Trading app, Kuala Lumpur", date:"Aug 24-Feb 25", role:"Lead Product Designer",
+    { company:"TinyTrader", tag:"Trading app, Kuala Lumpur", date:"Aug 2024 – Feb 2025", role:"Lead Product Designer",
       text:"Led product design for the TinyTrader mobile and web app, from UX strategy and user flows to high-fidelity UI and interactive prototypes. Established consistent UI patterns and reusable components, and worked closely with developers for a smooth handoff." },
-    { company:"CoinW", tag:"Global crypto exchange, Dubai", date:"Feb 23-Nov 24", role:"Product Designer",
+    { company:"CoinW", tag:"Global crypto exchange, Dubai", date:"Feb 2023 – Nov 2024", role:"Product Designer",
       text:"Designed the CoinW crypto trading app across onboarding, market exploration, spot trading, portfolio and account management. Simplified complex trading workflows, kept UI patterns consistent across the app, and partnered with product and engineering to ship user-centered solutions." },
-    { company:"Ajencia", tag:"eCommerce for UK clients, remote", date:"Sep 20-May 23", role:"Product Designer (part-time)",
+    { company:"Ajencia", tag:"eCommerce for UK clients, remote", date:"Sep 2020 – May 2023", role:"Product Designer (part-time)",
       text:"Designed eCommerce websites and mobile experiences for UK clients, including Grable, Glam 7 and MOOV.US. Improved product pages, cart and checkout flows for conversion, taking projects from user flows to polished, developer-ready UI." },
-    { company:"Dinosoftlabs", tag:"Food delivery & grocery apps, Lahore", date:"Oct 18-Jul 21", role:"UX/UI Designer",
+    { company:"Dinosoftlabs", tag:"Food delivery & grocery apps, Lahore", date:"Oct 2018 – Jul 2021", role:"UX/UI Designer",
       text:"Designed 50+ mobile apps and web interfaces across food delivery, grocery and marketplace platforms, including GoDelivery, Freshly Grocery, Foodies, Groupy and Binder, covering end-to-end flows, wireframes and responsive UI." },
   ],
 
