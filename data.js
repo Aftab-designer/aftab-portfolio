@@ -95,7 +95,7 @@ const DATA = {
       title:"Freshly: grocery shopping made quick and simple, in English and Arabic",
       color:"linear-gradient(135deg,#f4eee6,#e3483f)", mark:"Freshly",
       cover:"freshly-cover.webp",
-      thumb:"freshly-cover.webp",
+      thumb:"freshly-thumb.webp",
       live:"https://apps.apple.com/sa/app/freshly-grocery-customer/id1541284647", liveLabel:"View on the App Store",
       summary:"Freshly is a grocery delivery app for everyday shopping: fresh food, baby care, drinks and household items. At Dinosoftlabs I designed the customer app end to end, from browsing and search to the product page, cart and checkout, in light and dark mode. The app is live on the App Store.",
       stats:[ {value:"Live", label:"on the App Store since December 2020"}, {value:"2", label:"languages, English and Arabic"}, {value:"2", label:"themes, light and dark mode"} ],
