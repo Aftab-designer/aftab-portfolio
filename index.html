@@ -269,7 +269,7 @@ const pages = {
       <h1 ${w.eyebrow?'':'style="margin-top:32px"'}>${esc(w.title)}</h1>
       <p class="lead">${esc(w.summary)}</p>
       ${(w.stats||[]).length?`<div class="cs-stats">${w.stats.map(s=>`<div><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join('')}</div>`:''}
-      ${w.live?`<a class="cs-live" href="${esc(w.live)}" target="_blank" rel="noopener">Visit live website ↗</a>`:''}
+      ${w.live?`<a class="cs-live" href="${esc(w.live)}" target="_blank" rel="noopener">${esc(w.liveLabel||'Visit live website')} ↗</a>`:''}
       ${(w.meta||[]).length?`<dl class="cs-meta">${w.meta.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`:''}
       ${(w.sections||[]).map(s=>`
         <section class="cs-sec">
@@ -278,6 +278,7 @@ const pages = {
           ${s.points?list(s.points,false):''}
           ${s.numbered?list(s.numbered,true):''}
           ${(s.images||[]).map(fig).join('')}
+          ${s.link?`<a class="cs-live" href="${esc(s.link.href)}" target="_blank" rel="noopener">${esc(s.link.label)} ↗</a>`:''}
         </section>`).join('')}
       ${pub.length>1?`<a class="cs-next" href="#/work/${next.slug}"><span>Next case study</span>${esc(next.title)} →</a>`:''}`;
   }
