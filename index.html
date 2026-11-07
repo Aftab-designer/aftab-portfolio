@@ -102,6 +102,8 @@ ul.ask li{margin-top:4px}
 .meta span{display:block;color:var(--faint)}
 .cs-hero{aspect-ratio:16/9;border-radius:16px;overflow:hidden;display:grid;place-items:center;color:#fff;font-weight:600;font-size:28px;letter-spacing:-.03em}
 .cs-hero img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.cs-hero:has(img){aspect-ratio:auto;display:block}
+.cs-hero:has(img) img{height:auto;display:block}
 .cs-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:32px}
 .cs-stats div{background:var(--card);border-radius:14px;padding:18px}
 .cs-stats b{display:block;font-size:28px;font-weight:500;letter-spacing:-.03em;line-height:1.2}
